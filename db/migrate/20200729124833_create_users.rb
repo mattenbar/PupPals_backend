@@ -4,9 +4,11 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :owner
       t.string :email
       t.string :password_digest
-      t.string :name
+      t.string :pet_name
+      t.text :about
       t.string :breed
       t.string :size
+      t.string :sex
       t.integer :age
       t.string :city
       t.string :state
