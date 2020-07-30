@@ -197,7 +197,7 @@ DEPENDENCIES
   byebug
   faker (~> 2.13)
   fast_jsonapi
-  jwt (~> 2.2)
+  jwt
   listen (~> 3.2)
   pg (>= 0.18, < 2.0)
   puma (~> 4.1)
