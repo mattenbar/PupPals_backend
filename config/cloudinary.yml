@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: mattenbar
+  api_key: '777966229536999'
+  api_secret: BnoaxEHWP3SWKb7LmjDoVAHVOgs
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: mattenbar
+  api_key: '777966229536999'
+  api_secret: BnoaxEHWP3SWKb7LmjDoVAHVOgs
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: mattenbar
+  api_key: '777966229536999'
+  api_secret: BnoaxEHWP3SWKb7LmjDoVAHVOgs
+  enhance_image_tag: true
+  static_file_support: false
