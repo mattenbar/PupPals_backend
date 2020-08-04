@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       post '/register' => 'users#create'
       put '/img-upload' => 'users#img_upload'
       post '/liked-me' => 'users#likedMe'
+      post '/like-user' => 'users#likeUser'
       
       resources :sessions, only: [:create]
       delete '/logout' => 'sessions#destroy'

@@ -6,7 +6,6 @@ class Api::V1::UsersController < ApplicationController
   
   def create
     user = User.new(user_params)
-    user.img = "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
     if user.save
       render json: user, status: :created
     else
@@ -45,6 +44,12 @@ class Api::V1::UsersController < ApplicationController
     user = User.find(params[:user][:id])
     users = user.follower_users
     render json: {user: UserSerializer.new(users)}
+  end
+
+  def likeUser
+    user = User.find(params["user"]["currentUserId"])
+    liked_user = User.find_by(email: (params["user"]["likedUser"]))
+    liked_user.follower_users << user
   end
   
   
