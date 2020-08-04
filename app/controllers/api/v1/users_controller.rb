@@ -38,6 +38,7 @@ class Api::V1::UsersController < ApplicationController
     file_url = Cloudinary::Uploader.upload(params[:file], options = {})
     user.img = file_url["url"]
     user.save
+    render json: user
   end
 
   def likedMe
