@@ -40,6 +40,12 @@ class Api::V1::UsersController < ApplicationController
     user.img = file_url["url"]
     user.save
   end
+
+  def likedMe
+    user = User.find(params[:user][:id])
+    users = user.follower_users
+    render json: {user: UserSerializer.new(users)}
+  end
   
   
   
