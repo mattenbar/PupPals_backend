@@ -28,3 +28,6 @@
 
 # Ignore ENV
 .env
+
+# cloudinary API key
+/config/cloudinary.yml
